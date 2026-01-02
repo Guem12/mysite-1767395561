@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoVoyage - Location de Véhicules Premium</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+    <script type="module">
+        import('./app/page.js').then(({ default: App }) => {
+            const root = document.getElementById('root');
+            ReactDOM.render(React.createElement(App), root);
+        });
+    </script>
+<!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-900 to-indigo-800 text-white">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Votre Voyage, <span class="text-yellow-400">Votre Style</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Découvrez notre flotte premium de véhicules pour toutes vos aventures. Réservation simple et sécurisée.</p>
+            
+            <!-- Search Form -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl max-w-4xl mx-auto">
+                <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Lieu de prise en charge</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Paris, France">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Date de début</label>
+                        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-2">Date de fin</label>
+                        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                            Trouver un véhicule
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Véhicules Populaires</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Découvrez notre sélection de véhicules les plus demandés</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Vehicle Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <div class="relative">
+                        <img src="http://static.photos/automotive/640x360/1" alt="BMW Série 3" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Populaire
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">BMW Série 3</h3>
+                            <span class="text-2xl font-bold text-blue-600">€89/jour</span>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="users" class="w-4 h-4 mr-2"></i>
+                            <span class="mr-4">5 places</span>
+                            <i data-feather="briefcase" class="w-4 h-4 mr-2"></i>
+                            <span>3 bagages</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Automatique</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Économique</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">
+                            Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="http://static.photos/automotive/640x360/2" alt="Mercedes Classe C" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Mercedes Classe C</h3>
+                            <span class="text-2xl font-bold text-blue-600">€99/jour</span>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="users" class="w-4 h-4 mr-2"></i>
+                            <span class="mr-4">5 places</span>
+                            <i data-feather="briefcase" class="w-4 h-4 mr-2"></i>
+                            <span>4 bagages</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Automatique</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Luxe</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">
+                            Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="http://static.photos/automotive/640x360/3" alt="Audi Q5" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-gray-900">Audi Q5</h3>
+                            <span class="text-2xl font-bold text-blue-600">€119/jour</span>
+                        </div>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i data-feather="users" class="w-4 h-4 mr-2"></i>
+                            <span class="mr-4">5 places</span>
+                            <i data-feather="briefcase" class="w-4 h-4 mr-2"></i>
+                            <span>5 bagages</span>
+                        </div>
+                        <div class="flex space-x-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Automatique</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">SUV</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300">
+                            Réserver maintenant
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Pourquoi Choisir AutoVoyage ?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Une expérience de location exceptionnelle</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="shield" class="w-10 h-10 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Sécurité Totale</h3>
+                    <p class="text-gray-600">Assurance complète et véhicules régulièrement entretenus pour votre tranquillité d'esprit</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="clock" class="w-10 h-10 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Disponibilité 24/7</h3>
+                    <p class="text-gray-600">Service client disponible à tout moment pour répondre à vos besoins</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="award" class="w-10 h-10 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Qualité Premium</h3>
+                    <p class="text-gray-600">Véhicules haut de gamme et service personnalisé pour une expérience unique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
